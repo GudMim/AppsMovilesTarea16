@@ -54,7 +54,7 @@ export default function Index() {
 			if(!data.error && data.id)
 			{
 				setLoginData(data);
-				router.replace('/mainmenu');
+				router.replace({ pathname: '/profile' } as any);
 			}
 			else
 			{
@@ -72,8 +72,8 @@ export default function Index() {
   return (
     <View style={styles.container}>
 		{/* IconRocket es un componente definido en app/iconrocket.tsx, el cual es un SVGElement, osea una imagen vectorial*/}
-		<IconRocket width="150" height="150"></IconRocket>
-		<Text style={styles.title}>Appify</Text>
+	<IconRocket width="150" height="150"></IconRocket>
+	<Text style={styles.title}>Orbitly</Text>
 		<Text style={styles.subtitle}>¡Te damos la bienvenida!</Text>		
 		<View style={styles.inputfieldlabel}>
 			<Text >Usuario</Text>
@@ -90,11 +90,16 @@ export default function Index() {
 			<IconRobot width='32' height='32'></IconRobot>
 			<Text>Log in!</Text>
 		</Pressable>
-		<Text style={{fontWeight:'bold'}} >¿No tienes una cuenta?</Text>
+			<Text style={{fontWeight:'bold'}} >¿No tienes una cuenta?</Text>
 		<Pressable style={styles.botonconlogo} onPress={onButtonRegister} >
 			<IconRobot width='32' height='32'></IconRobot>
 			<Text>Regístrate</Text>
 		</Pressable>
+		<View style={styles.footer}>
+				<Link href="/credits">
+				<Text>Made with 🧡 by Orbitly Team.</Text>
+				</Link>
+		</View>	
 
     </View>
 	
@@ -128,6 +133,12 @@ const styles=StyleSheet.create(
 			alignItems: 'center',
 			justifyContent: 'flex-end',
 			width:'60%'
+		},
+		footer:{
+			position:"absolute",
+			bottom:5,
+			backgroundColor:"#afa",
+			padding:10,
 		},
 		input: {
 			height: 40,

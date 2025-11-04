@@ -8,6 +8,7 @@ import { MyContext } from "./Context";
 export default function Index()
 {
 	const {loginData, setLoginData}=useContext(MyContext);
+	console.log("mainmenu loginData:", loginData);
 	return (
 		<View style={styles.container}>
 			<View style={styles.profile}>
@@ -18,9 +19,7 @@ export default function Index()
 			
 			
 				<View style={styles.footer}>
-				<Link href="/credits">
-				<Text>Made with 🧡 by Appify Team.</Text>
-				</Link>
+				
 				</View>	
 		</View>
 	)

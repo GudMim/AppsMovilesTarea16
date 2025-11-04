@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "registro-login",
-    "slug": "registro-login",
+  "name": "Orbitly",
+  "slug": "orbitly",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "registrologin",
+  "scheme": "orbitly",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

@@ -6,10 +6,10 @@ export default function Index()
 
 	return (
 		<View style={styles.container}>
-			<Text>Equipo [nombre de su app]</Text>
-			<Text>Integrante 1</Text>
-			<Text>Integrante 2</Text>
-			<Text>Integrante 3</Text>
+			<Text>Equipo [Orbitly]</Text>
+			<Text>Guillermo Arrieta Medina</Text>
+			<Text>Emiliano Rivera Beristain</Text>
+			<Text>Sebastián Alejandro Guzmán Higuera</Text>
 		</View>
 	)
 }

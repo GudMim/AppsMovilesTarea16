@@ -1,12 +1,17 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState, ReactNode } from 'react';
 
-export const MyContext = createContext({
-	loginData:{},
-	setLoginData:()=>{},
+type MyContextType = {
+	loginData: any;
+	setLoginData: (d: any) => void;
+};
+
+export const MyContext = createContext<MyContextType>({
+	loginData: {},
+	setLoginData: () => {},
 });
 
-export const MyContextProvider = ({children})=>{
-	const [loginData, setLoginData]=useState({});
+export const MyContextProvider = ({children}:{children:ReactNode})=>{
+	const [loginData, setLoginData]=useState<any>({});
 
 	return (
 		<MyContext.Provider value={{loginData, setLoginData}}>
